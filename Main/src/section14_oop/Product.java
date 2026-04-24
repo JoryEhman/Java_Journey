@@ -14,7 +14,7 @@ public class Product {
     public void setItemNum(){
         ++itemIndex;
     }
-1
+
     public String getName(){
         return name;
     }
