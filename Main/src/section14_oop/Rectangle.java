@@ -1,8 +1,33 @@
 package section14_oop;
 
 public class Rectangle {
-    public double length;
-    public double width;
+    private double length;
+    private double width;
+
+    //getLength
+    public double getLength(){
+        return length;
+    }
+
+    public double getWidth(){
+        return width;
+    }
+
+    public void setLength(double length){
+        if (length > 0) {
+            this.length = length;
+        } else {
+            length = 0;
+        }
+    }
+
+    public void setWidth(double width){
+        if (width > 0){
+            this.width = width;
+        } else {
+            width = 0;
+        }
+    }
 
     public double area(){
         return length * width;
@@ -11,14 +36,13 @@ public class Rectangle {
     public double perimeter(){
         return (2 * length) + (2 * width);
     }
-
+}
+class Testing{
     public static void main(String[] args){
         Rectangle r1 = new Rectangle();
-        r1.length = 2;
-        r1.width = 3;
-        //2 * 3
+        r1.setLength(10.5);
+        r1.setWidth(5.5);
         System.out.println("The area of r1 is: " + r1.area());
-        //(2 * 2) + (2 * 3) = 4 + 6
         System.out.println("The perimeter of r1 is: " + r1.perimeter());
     }
 }
